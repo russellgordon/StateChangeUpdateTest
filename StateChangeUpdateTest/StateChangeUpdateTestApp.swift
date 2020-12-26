@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct StateChangeUpdateTestApp: App {
+    
+    @StateObject var model = Items()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(model)
         }
     }
 }
